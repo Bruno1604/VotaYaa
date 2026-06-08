@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">VotaYa</string>
+    <string name="hello_blank_fragment">Hola</string>
+    <string name="mail">Correo:</string>
+    <string name="password">Contraseña:</string>
+    <string name="restorePassword">Olvidé mi contraseña</string>
+    <string name="signIn">Ingresar</string>
+    <string name="register">¿No tienes cuenta? Regístrate</string>
+    <string name="backToSignIn">¿Ya tienes cuenta? Inicia sesión</string>
+    <string name="firstName">Nombre</string>
+    <string name="lastName">Apellidos</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="phone">Teléfono</string>
+    <string name="birthDate">Fecha de nacimiento</string>
+    <string name="save">Guardar</string>
+
+    <!-- VotaYa specific strings -->
+    <string name="title_home">Inicio</string>
+    <string name="title_votaciones">Votaciones</string>
+    <string name="title_equipos">Equipos</string>
+    <string name="title_perfil">Perfil</string>
+    <string name="recover_password_title">Recuperar Contraseña</string>
+    <string name="send_recovery_email">Enviar correo de recuperación</string>
+
+    <string name="welcome_message">Bienvenido a VotaYa</string>
+    <string name="app_description">Tu plataforma de votaciones para equipos de trabajo rápida y segura.</string>
+    <string name="logo_desc">VotaYa Logo</string>
+    <string name="setup_profile_title">Configura tu Perfil</string>
+    <string name="create_account_title">Crear Cuenta</string>
+    <string name="register_btn">Registrarse</string>
+    <string name="confirm_password_hint">Confirmar Contraseña</string>
+
+    <!-- New VotaYa labels -->
+    <string name="title_proposals">Propuestas</string>
+    <string name="title_teams">Mis Equipos</string>
+
+    <string name="recent_activity">Actividad Reciente</string>
+    <string name="logout">Cerrar Sesión</string>
+    <string name="status_open">Abierta</string>
+    <string name="status_closed">Finalizada</string>
+    <string name="votes_count">Votos: %1$d</string>
+    <string name="loading_data">Cargando datos...</string>
+    <string name="error_loading_teams">Error al cargar equipos</string>
+    <string name="error_loading_votes">Error al cargar votaciones</string>
+</resources>

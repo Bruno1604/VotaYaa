@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/home_ic"
+        android:title="@string/title_home"/>
+    <item
+        android:id="@+id/votacionesFragment"
+        android:icon="@drawable/ic_votaya_logo"
+        android:title="@string/title_votaciones"/>
+    <item
+        android:id="@+id/equiposFragment"
+        android:icon="@drawable/account_ic"
+        android:title="@string/title_equipos"/>
+    <item
+        android:id="@+id/perfilFragment"
+        android:icon="@drawable/account_ic"
+        android:title="@string/title_perfil"/>
+</menu>
