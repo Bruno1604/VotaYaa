@@ -21,7 +21,8 @@ class VotacionesAdapter(private var posts: List<DummyPost>) :
         holder.binding.votacionTitleTv.text = post.title
         holder.binding.votacionDescTv.text = post.body
         holder.binding.statusChip.text = if (post.id % 2 == 0) "Abierta" else "Finalizada"
-        holder.binding.reactionsTv.text = "Votos: ${post.reactions}"
+        // Mostramos el total de reacciones (likes + dislikes) o solo likes
+        holder.binding.reactionsTv.text = "Votos: ${post.reactions.likes}"
     }
 
     override fun getItemCount(): Int = posts.size

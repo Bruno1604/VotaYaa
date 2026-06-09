@@ -33,5 +33,10 @@ data class DummyPost(
     val body: String,
     val userId: Int,
     val tags: List<String>,
-    val reactions: Int
+    val reactions: Reactions
+)
+
+data class Reactions(
+    val likes: Int,
+    val dislikes: Int
 )

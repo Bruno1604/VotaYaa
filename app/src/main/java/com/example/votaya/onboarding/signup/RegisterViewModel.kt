@@ -1,5 +1,6 @@
 package com.example.votaya.onboarding.signup
 
+import android.util.Patterns
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.votaya.core.AuthRepository
@@ -18,8 +19,17 @@ class RegisterViewModel: ViewModel() {
 
 
     // --- Validación ---
-    fun validateEmail(email: String): String? { return null }
-    fun validatePassword(password: String): String? { return null }
+    fun validateEmail(email: String): String? {
+        if (email.isBlank()) return "El correo es obligatorio"
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) return "Correo inválido"
+        return null
+    }
+
+    fun validatePassword(password: String): String? {
+        if (password.isBlank()) return "La contraseña es obligatoria"
+        if (password.length < 6) return "Mínimo 6 caracteres"
+        return null
+    }
 
     fun validateConfirmPassword(password: String, confirm: String): String? {
         if (confirm.isBlank()) return "Confirma tu contraseña"
