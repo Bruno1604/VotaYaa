@@ -16,20 +16,16 @@ class PersonalInfoViewModel: ViewModel() {
     private val _saveState = MutableStateFlow<ResponseService<Unit>?>(null)
     val saveState: StateFlow<ResponseService<Unit>?> = _saveState.asStateFlow()
 
-    // --- Validaciones por campo ---
+    // --- Validaciones mejoradas ---
     fun validateFirstName(value: String): String? {
         if (value.isBlank()) return "El nombre es requerido"
         if (value.length < 2) return "Mínimo 2 caracteres"
-        if (!value.all { it.isLetter() || it.isWhitespace() })
-            return "Solo se permiten letras"
         return null
     }
 
     fun validateLastName(value: String): String? {
         if (value.isBlank()) return "Los apellidos son requeridos"
         if (value.length < 2) return "Mínimo 2 caracteres"
-        if (!value.all { it.isLetter() || it.isWhitespace() })
-            return "Solo se permiten letras"
         return null
     }
 
@@ -43,8 +39,10 @@ class PersonalInfoViewModel: ViewModel() {
 
     fun validatePhone(value: String): String? {
         if (value.isBlank()) return "El teléfono es requerido"
-        if (!value.all { it.isDigit() }) return "Solo números"
-        if (value.length !in 10..15) return "Entre 10 y 15 dígitos"
+        // Permitimos +, espacios y guiones para evitar frustración
+        val cleanPhone = value.replace(Regex("[\\s\\-+]"), "")
+        if (!cleanPhone.all { it.isDigit() }) return "Formato de teléfono inválido"
+        if (cleanPhone.length < 10) return "Mínimo 10 dígitos"
         return null
     }
 

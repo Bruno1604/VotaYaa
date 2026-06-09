@@ -27,7 +27,8 @@ class RegisterViewModel: ViewModel() {
 
     fun validatePassword(password: String): String? {
         if (password.isBlank()) return "La contraseña es obligatoria"
-        if (password.length < 6) return "Mínimo 6 caracteres"
+        // Actualizado a 8 para coincidir con el login y mejorar seguridad
+        if (password.length < 8) return "Mínimo 8 caracteres"
         return null
     }
 
